@@ -1,14 +1,12 @@
 enablePlugins(GatlingPlugin)
 
-ThisBuild / version := "0.1.0-SNAPSHOT"
+scalaVersion := "2.13.16"
 
-ThisBuild / scalaVersion := "3.3.6"
-
-lazy val root = (project in file("."))
-  .settings(
-    name := "LoadTest"
-  )
+scalacOptions := Seq(
+  "-encoding", "UTF-8", "-release:8", "-deprecation",
+  "-feature", "-unchecked", "-language:implicitConversions", "-language:postfixOps")
 
 val gatlingVersion = "3.13.5"
 libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % gatlingVersion % "test,it"
 libraryDependencies += "io.gatling"            % "gatling-test-framework"    % gatlingVersion % "test,it"
+
