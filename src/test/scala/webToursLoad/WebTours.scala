@@ -7,7 +7,7 @@ import io.gatling.http.protocol.HttpProtocolBuilder
 object WebTours {
 
   val httpProtocol: HttpProtocolBuilder = http
-    .baseUrl("http://webtours.load-test.ru:1090/webtours/")
+    .baseUrl("http://webtours.load-test.ru:1090")
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
