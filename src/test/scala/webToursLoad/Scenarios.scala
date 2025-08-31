@@ -17,4 +17,5 @@ class Scenarios {
     .exec(Actions.selectCity)
     .exec(Actions.selectFlight)
     .exec(Actions.bookFlight)
+    .exec(Actions.getHomePage)
 }

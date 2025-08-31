@@ -77,4 +77,9 @@ object Actions {
     .formParam("buyFlights.x", "49")
     .formParam("buyFlights.y", "7")
 
+  val getHomePage: HttpRequestBuilder = http("getHomePage")
+    .get("/cgi-bin/login.pl")
+    .queryParam("intro", "true")
+    .check(status is 200)
+
 }
