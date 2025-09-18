@@ -8,7 +8,7 @@ object Scenarios {
 }
 
 class Scenarios {
-  val scn = scenario("Scenarios")
+  val scn: ScenarioBuilder = scenario("Scenarios")
     .feed(Feeders.users)
     .exec(Actions.getMainPage)
     .exec(Actions.getLoginPage)
@@ -17,5 +17,5 @@ class Scenarios {
     .exec(Actions.selectCity)
     .exec(Actions.selectFlight)
     .exec(Actions.bookFlight)
-    .exec(Actions.getHomePage)
+    .exec(Actions.logout)
 }
